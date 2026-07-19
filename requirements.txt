@@ -1,0 +1,23 @@
+# requirements.txt
+streamlit                 # web app framework for the UI
+
+# --- Core Retrieval ---
+faiss-cpu                  # vector store + similarity search (CPU version, no GPU needed)
+sentence-transformers     # embedding model + cross-encoder reranker
+rank-bm25                 # BM25 keyword search
+
+# --- LLM ---
+groq==0.9.0                 # LLM for generation + LLM-as-judge in eval
+
+# --- Telemetry ---
+langfuse                 # tracing UI (optional but impressive on resume)
+
+# --- Evaluation ---
+ragas                     # RAG evaluation metrics
+
+# --- Utilities ---
+numpy                    # array ops (used by faiss + sentence-transformers)
+python-dotenv             # loads your .env file (API keys)
+tqdm                      # progress bars when indexing
+
+pymupdf==1.24.0

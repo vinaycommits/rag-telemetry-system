@@ -1,0 +1,163 @@
+[
+  {
+    "question_id": "f_001",
+    "question": "What does BM25 stand for?",
+    "expected_answer": "Best Match 25",
+    "answer_type": "exact",
+    "tags": ["factual"]
+  },
+  {
+    "question_id": "f_002",
+    "question": "What does RAG stand for?",
+    "expected_answer": "Retrieval-Augmented Generation",
+    "answer_type": "exact",
+    "tags": ["factual"]
+  },
+  {
+    "question_id": "f_003",
+    "question": "What library is used for vector similarity search?",
+    "expected_answer": "FAISS",
+    "answer_type": "exact",
+    "tags": ["factual"]
+  },
+  {
+    "question_id": "f_004",
+    "question": "What is the purpose of a cross-encoder?",
+    "expected_answer": "To score query-document pairs jointly for more accurate relevance ranking",
+    "answer_type": "open_ended",
+    "tags": ["factual"]
+  },
+  {
+    "question_id": "f_005",
+    "question": "What is RRF used for?",
+    "expected_answer": "Combining ranked lists from multiple search systems",
+    "answer_type": "open_ended",
+    "tags": ["factual"]
+  },
+  {
+    "question_id": "hall_001",
+    "question": "What GPU is required to run a RAG pipeline?",
+    "expected_answer": "I don't know",
+    "answer_type": "exact",
+    "tags": ["hallucination", "out_of_corpus"]
+  },
+  {
+    "question_id": "hall_002",
+    "question": "How many parameters does the BM25 model have?",
+    "expected_answer": "I don't know",
+    "answer_type": "exact",
+    "tags": ["hallucination", "out_of_corpus"]
+  },
+  {
+    "question_id": "hall_003",
+    "question": "Who invented the FAISS library?",
+    "expected_answer": "I don't know",
+    "answer_type": "exact",
+    "tags": ["hallucination", "out_of_corpus"]
+  },
+  {
+    "question_id": "mh_001",
+    "question": "How do BM25 and vector search complement each other in a hybrid pipeline?",
+    "expected_answer": "BM25 handles exact keyword matches while vector search handles semantic similarity. Together they cover each other's weaknesses.",
+    "answer_type": "open_ended",
+    "tags": ["multi_hop"]
+  },
+  {
+    "question_id": "mh_002",
+    "question": "Why do we use a cross-encoder after RRF fusion?",
+    "expected_answer": "RRF fusion produces a ranked list of candidates but cross-encoder reranking gives more precise relevance scores by scoring query and document jointly.",
+    "answer_type": "open_ended",
+    "tags": ["multi_hop"]
+  },
+  {
+    "question_id": "mh_003",
+    "question": "What is the full pipeline from a user query to a final answer in a RAG system?",
+    "expected_answer": "Query goes through BM25 and vector search, results are fused with RRF, reranked by a cross-encoder, top chunks are passed to an LLM which generates the final answer.",
+    "answer_type": "open_ended",
+    "tags": ["multi_hop"]
+  },
+  {
+    "question_id": "bm25_001",
+    "question": "How do we stop the model from making things up?",
+    "expected_answer": "RAG grounds LLM outputs in retrieved documents reducing hallucination",
+    "answer_type": "open_ended",
+    "tags": ["bm25_miss"]
+  },
+  {
+    "question_id": "bm25_002",
+    "question": "What technique improves factual accuracy of language models?",
+    "expected_answer": "Retrieval-Augmented Generation grounds the model in retrieved facts",
+    "answer_type": "open_ended",
+    "tags": ["bm25_miss"]
+  },
+  {
+    "question_id": "sem_001",
+    "question": "vector store index creation",
+    "expected_answer": "FAISS is used to create a vector store index for similarity search",
+    "answer_type": "open_ended",
+    "tags": ["semantic_miss"]
+  },
+  {
+    "question_id": "sem_002",
+    "question": "keyword scoring algorithm",
+    "expected_answer": "BM25 is a keyword-based ranking function used in search",
+    "answer_type": "open_ended",
+    "tags": ["semantic_miss"]
+  },
+  {
+    "question_id": "ooc_001",
+    "question": "What is the price of the FAISS library?",
+    "expected_answer": "I don't know",
+    "answer_type": "exact",
+    "tags": ["out_of_corpus"]
+  },
+  {
+    "question_id": "ooc_002",
+    "question": "What programming language is BM25 written in?",
+    "expected_answer": "I don't know",
+    "answer_type": "exact",
+    "tags": ["out_of_corpus"]
+  },
+  {
+    "question_id": "ooc_003",
+    "question": "What is the latest version of the sentence-transformers library?",
+    "expected_answer": "I don't know",
+    "answer_type": "exact",
+    "tags": ["out_of_corpus"]
+  },
+  {
+    "question_id": "real_001",
+    "question": "What architecture does the Transformer model use instead of recurrence?",
+    "expected_answer": "Self-attention mechanisms",
+    "answer_type": "open_ended",
+    "tags": ["factual"]
+  },
+  {
+    "question_id": "real_002",
+    "question": "What does BERT stand for?",
+    "expected_answer": "Bidirectional Encoder Representations from Transformers",
+    "answer_type": "exact",
+    "tags": ["factual"]
+  },
+  {
+    "question_id": "real_003",
+    "question": "What pre-training tasks does BERT use?",
+    "expected_answer": "Masked LM and next sentence prediction",
+    "answer_type": "open_ended",
+    "tags": ["factual"]
+},
+{
+    "question_id": "real_004",
+    "question": "What does RAG combine to generate answers?",
+    "expected_answer": "A language model and a retrieval system",
+    "answer_type": "open_ended",
+    "tags": ["multi_hop"]
+},
+  {
+    "question_id": "real_005",
+    "question": "How many attention heads does the base Transformer model use?",
+    "expected_answer": "8",
+    "answer_type": "exact",
+    "tags": ["factual"]
+  }
+]
